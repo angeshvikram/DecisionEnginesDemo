@@ -14,7 +14,7 @@ you picked, and why.
 
 ## Solution:
 
-  Will create three Docker containers [1: MongoDB 2: Backend Micro-service (Java,Spring)  3: Frontend (Node,Anger)
+  Will create three Docker containers [1: MongoDB 2: Backend Micro-service (Java,Spring)  3: Frontend (Node, AngularJS)
 
 <img width="828" alt="DockerContainers" src="https://user-images.githubusercontent.com/6364184/57548994-39a3f800-7317-11e9-80a4-9758f813e476.png">
 
