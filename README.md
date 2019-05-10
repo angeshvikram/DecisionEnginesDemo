@@ -3,12 +3,12 @@ DecisionEnginesDemo
 
 Web service coding challenge
 This challenge is to produce a web service using Java or Python.This web service should be a restful API that performs a search with the following requirements:
-● The request should accept a search string as input.
-● The data to be searched should be in a MongoDB database.
-● The response should be formatted in JSON.
-● The API should handle at least one scalability concern. Describe which scalability
+- The request should accept a search string as input.
+- The data to be searched should be in a MongoDB database.
+- The response should be formatted in JSON.
+- The API should handle at least one scalability concern. Describe which scalability
 concerns you picked, and why.
-● The API should handle at least one security concern. Describe which security concern
+- The API should handle at least one security concern. Describe which security concern
 you picked, and why.
 
 
@@ -23,12 +23,11 @@ you picked, and why.
 
 ### Pre-requisites:
 
-##### docker
+- docker
   https://docs.docker.com/docker-for-mac/install/
   Or
   https://docs.docker.com/docker-for-windows/install/
-  
-##### docker-compose
+- docker-compose
   https://docs.docker.com/compose/install/
   
 ### To run:
