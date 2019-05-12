@@ -1,0 +1,48 @@
+version: '3'
+services:
+  angesh:
+   container_name: av-de-ui
+   restart: always
+   build:
+      context: ./ui
+      dockerfile: Dockerfile
+   volumes:
+      - './ui:/usr/src/app'
+      - '/usr/src/app/node_modules'
+   ports:
+      - '4200:4200'
+   links:
+     - app
+  mongo:
+    container_name: mongo
+    image: mongo:3.6
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    ports:
+        - 27017:27017
+        - 27001:27001
+        - 27002:27002
+        - 27000:27000
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+  app:
+    container_name: app
+    restart: always
+    build: ./app
+    working_dir: /app
+    volumes:
+      - ./app:/app
+      - ~/.m2:/root/.m2
+    environment:
+      - SERVER_PORT=8080
+      - MONGODB_URI=mongo://mongo:27017/demorest
+      - MONGODB_STATUS_HOST=mongo
+    ports:
+      - 8080:8080
+    links:
+      - mongo
+    command: mvn clean spring-boot:run
+    depends_on:
+      - mongo

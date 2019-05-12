@@ -1,0 +1,6 @@
+com/angeshde/springboot/controller/ProductController.class
+com/angeshde/springboot/repository/ProductRepository.class
+com/angeshde/springboot/service/ProductService.class
+com/angeshde/springboot/model/Product.class
+com/angeshde/springboot/controller/IndexController.class
+com/angeshde/springboot/WebApplication.class
